@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <style type="text/css">
+        #board {
+          background-color: white;
+          box-shadow: 0px 0px 0px 2px white;
+          margin: auto;
+          position: relative;
+        }
+        .square-container {
+          background-color: #EFEFEF;
+          box-shadow:inset 0px 0px 0px 2px white;
+          border-radius: 5px;
+          position: absolute;
+        }
+        .tile {
+          color: white;
+          position: absolute;
+          text-align: center;
+          display: table;
+          z-index:2;
+          box-shadow:inset 0px 0px 0px 2px white;
+        }
+        .tile>p {
+          display: table-cell;
+          vertical-align: middle;
+        }
+        .tile.back2 {
+          background-color: #efbbff;
+        }
+        .tile.back4 {
+          background-color: #800080;
+        }
+        h5 {
+          width: 480px;
+          margin: auto;
+          font-weight: bold;
+          padding-top: 3%;
+          padding-bottom: 3%;
+        }
+      </style>
+    </head>
+
+    <body>
+      <div id="container" class="container">
+        <header><h5>THE RANDOM 2048</h5></header>
+        <div id="game">
+        </div>
+      </div>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="js/main.js"></script>
+      <script type="text/javascript">
+        $(function() {
+          $('#game').mygame(120);
+        });
+      </script>
+    </body>
+  </html>
